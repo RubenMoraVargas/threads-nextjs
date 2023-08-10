@@ -42,7 +42,7 @@ function ThreadCard({
   return (
     <article
       className={`flex w-full flex-col rounded-xl ${
-        isComment ? "px-0 xs:px-7" : "bg-dark-2 p-7"
+        isComment ? "xs:px-7 px-0" : "bg-dark-2 p-7"
       }`}
     >
       <div className='flex items-start justify-between'>
@@ -62,12 +62,12 @@ function ThreadCard({
 
           <div className='flex w-full flex-col'>
             <Link href={`/profile/${author.id}`} className='w-fit'>
-              <h4 className='cursor-pointer text-base-semibold text-light-1'>
+              <h4 className='text-base-semibold text-light-1 cursor-pointer'>
                 {author.name}
               </h4>
             </Link>
 
-            <p className='mt-2 text-small-regular text-light-2'>{content}</p>
+            <p className='text-small-regular text-light-2 mt-2'>{content}</p>
 
             <div className={`${isComment && "mb-10"} mt-5 flex flex-col gap-3`}>
               <div className='flex gap-3.5'>
@@ -105,7 +105,7 @@ function ThreadCard({
 
               {isComment && comments.length > 0 && (
                 <Link href={`/thread/${id}`}>
-                  <p className='mt-1 text-subtle-medium text-gray-1'>
+                  <p className='text-subtle-medium text-gray-1 mt-1'>
                     {comments.length} repl{comments.length > 1 ? "ies" : "y"}
                   </p>
                 </Link>
@@ -137,7 +137,7 @@ function ThreadCard({
           ))}
 
           <Link href={`/thread/${id}`}>
-            <p className='mt-1 text-subtle-medium text-gray-1'>
+            <p className='text-subtle-medium text-gray-1 mt-1'>
               {comments.length} repl{comments.length > 1 ? "ies" : "y"}
             </p>
           </Link>

@@ -17,9 +17,7 @@ import {
   removeUserFromCommunity,
   updateCommunityInfo,
 } from "@/lib/actions/community.actions";
-
-// Resource: https://clerk.com/docs/integration/webhooks#supported-events
-// Above document lists the supported events
+ 
 type EventType =
   | "organization.created"
   | "organizationInvitation.created"

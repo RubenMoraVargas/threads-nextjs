@@ -28,7 +28,7 @@ export default function RootLayout({
         baseTheme: dark,
       }}
     >
-      <html lang='en'>
+      <html lang='en' suppressHydrationWarning>
         <body className={inter.className}>
           <Topbar />
 
@@ -36,8 +36,7 @@ export default function RootLayout({
             <LeftSidebar />
             <section className='main-container'>
               <div className='w-full max-w-4xl'>{children}</div>
-            </section>
-            {/* @ts-ignore */}
+            </section> 
             <RightSidebar />
           </main>
 
